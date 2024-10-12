@@ -40,7 +40,7 @@ const Contact = () => {
                 <div className="flex flex-col gap-8">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-orange-300 bg-clip-text text-transparent">Let's talk</h1>
                     <p className="max-w-[550px] text-[#D8D8D8] text-[18px] leading-[30px]">
-                        Lorem ipsum odor amet, consectetuer adipiscing elit. Blandit euismod porta commodo nullam mattis class curabitur natoque.
+                        I'm open to taking on new projects, so don't hesitate to reach out with any work you have in mind. You can contact me at any time.
                     </p>
                     <div className="flex flex-col gap-6 text-[#D8D8D8] text-[20px]">
                         <div className="flex items-center gap-4">
