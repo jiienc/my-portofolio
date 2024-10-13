@@ -20,11 +20,11 @@ const Contact = () => {
         const data = await response.json();
 
         if (data.success) {
-            toast.success("Form Submitted Successfully!"); // Pop-up for success
+            toast.success("Form Submitted Successfully!");
             event.target.reset();
         } else {
             console.log("Error", data);
-            toast.error(data.message); // Pop-up for error
+            toast.error(data.message);
         }
     };
 

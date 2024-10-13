@@ -30,12 +30,8 @@ const AboutMe = () => {
                 </div>
                 <div className="flex flex-col gap-20 w-[75%]">
                     <div className="flex flex-col gap-5 text-24px font-medium">
-                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet velit maximus semper mauris
-                            ullamcorper. Placerat bibendum tincidunt class nibh mi pulvinar pellentesque rutrum.
-                            Ullamcorper aliquam malesuada vitae porttitor ligula et erat.</p>
-                        <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet velit maximus semper mauris
-                            ullamcorper. Placerat bibendum tincidunt class nibh mi pulvinar pellentesque rutrum.
-                            Ullamcorper aliquam malesuada vitae porttitor ligula et erat.</p>
+                        <p>As a recent graduate from Duta Wacana Christian University, Yogyakarta with a Bachelor's degree in Informatics, I have specialized in Deep Learning model development using TensorFlow and web development using JavaScript. Throughout my studies, I have been involved in various projects that have honed my technical skills and provided a deep understanding of best practices in AI model development and React JS development.</p>
+                        <p>One of my notable projects involved creating a deep learning model for image recognition, where I utilized TensorFlow to design, train, and optimize the model. This project allowed me to gain hands-on experience in data preprocessing, model evaluation, and fine-tuning hyperparameters. Additionally, I developed several web applications using React JS, where I focused on creating dynamic and responsive user interfaces. These projects not only enhanced my proficiency in JavaScript but also taught me the importance of state management, component lifecycle, and effective debugging techniques.</p>
                     </div>
                     <div className="flex flex-col gap-5">
                         {skills.map(skill => (
