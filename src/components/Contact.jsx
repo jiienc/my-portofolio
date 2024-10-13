@@ -4,8 +4,16 @@ import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
 import VillaRoundedIcon from '@mui/icons-material/VillaRounded';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useForm } from "react-hook-form";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const Contact = () => {
+    const { register, handleSubmit, setValue } = useForm();
+
+    const onHCaptchaChange = (token) => {
+        setValue("h-captcha-response", token);
+    };
+
     const onSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -39,7 +47,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
                 <div className="flex flex-col gap-8">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-orange-300 bg-clip-text text-transparent">Let's talk</h1>
-                    <p className="max-w-[550px] text-[#D8D8D8] text-[18px] leading-[30px]">
+                    <p className="max-w-[550px] text-[#D8D8D8] text-[18px] leading-[30px] text-justify">
                         I'm open to taking on new projects, so don't hesitate to reach out with any work you have in mind. You can contact me at any time.
                     </p>
                     <div className="flex flex-col gap-6 text-[#D8D8D8] text-[20px]">
@@ -84,6 +92,12 @@ const Contact = () => {
                         placeholder='Enter your message'
                         className="w-full border-none p-[20px] rounded-[4px] bg-[#32323c] text-[#ΑΘΑΘΑΘ] font-outfit text-[18px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                     ></textarea>
+
+                    <HCaptcha
+                        sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                        reCaptchaCompat={false}
+                        onVerify={onHCaptchaChange}
+                    />
 
                     <button
                         type='submit'
